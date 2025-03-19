@@ -1,0 +1,8 @@
+COLA <-- Colocar el nodo inicial en la COLA.
+2. MIENTRAS la COLA no esté vacía Y la META no se haya alcanzado
+    a. Extraer el primer nodo de la COLA (DEQUEUE).
+    b. S1 el nodo extraído es la META, [Éxitol
+    C. Expandir el nodo extraído y marcarlo como visitado.
+    d. Agregar los nodos vecinos no visitados al final de la COLA (QUEUE).
+3. SI se alcanza la META ENTONCES Éxito
+4.CASO CONTRARIO, si la COLA se vacía sin haber alcanzado la meta fracaso 
