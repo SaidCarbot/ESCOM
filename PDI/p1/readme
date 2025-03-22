@@ -1,0 +1,44 @@
+# Práctica 1: Análisis de Componentes Conexas en Imágenes
+
+Este script de Python realiza un análisis de componentes conexas en una imagen binaria. El objetivo principal es identificar y etiquetar objetos individuales dentro de la imagen, utilizando diferentes criterios de conectividad (vecindad-4 y vecindad-8).
+
+## Descripción del Código
+
+El código se divide en los siguientes pasos:
+
+1.  **Carga y Binarización de la Imagen:**
+    * Carga una imagen en escala de grises llamada `imagen_prueba.png`.
+    * Verifica si la imagen se cargó correctamente.
+    * Aplica una umbralización simple para convertir la imagen a blanco y negro (binaria). El umbral utilizado es 127.
+    * Muestra la imagen binarizada utilizando `matplotlib`.
+
+2.  **Etiquetado de Componentes Conexas:**
+    * Utiliza la función `cv2.connectedComponents` de OpenCV para identificar los componentes conexas en la imagen binaria, considerando dos tipos de vecindad:
+        * **Vecindad-4:** Un píxel se considera conectado a sus vecinos si comparten un borde (arriba, abajo, izquierda o derecha).
+        * **Vecindad-8:** Un píxel se considera conectado a sus vecinos si comparten un borde o una esquina.
+    * Imprime el número de objetos detectados para cada tipo de vecindad (se resta 1 al número de etiquetas ya que la etiqueta 0 representa el fondo).
+    * Muestra los resultados del etiquetado para ambas vecindades utilizando un mapa de colores (`jet`) en `matplotlib`.
+
+3.  **Dibujo de Contornos y Numeración de los Objetos:**
+    * Convierte la imagen binaria a color (BGR) para poder dibujar contornos en verde.
+    * Utiliza la función `cv2.findContours` para encontrar los contornos de los objetos en la imagen binaria.
+    * Itera a través de los contornos encontrados:
+        * Dibuja cada contorno en la imagen a color.
+        * Calcula el cuadro delimitador de cada contorno para encontrar su posición aproximada.
+        * Coloca un número (empezando desde 1) cerca del centro de cada objeto utilizando `cv2.putText`.
+    * Muestra la imagen resultante con los contornos dibujados y los objetos numerados.
+
+4.  **Comparación entre Vecindad-4 y Vecindad-8:**
+    * Calcula la diferencia absoluta entre el número de objetos detectados con vecindad-4 y vecindad-8.
+    * Imprime esta diferencia.
+
+## Requisitos
+
+Para ejecutar este código, necesitas tener instaladas las siguientes librerías de Python:
+
+* **OpenCV (cv2):** Para la manipulación de imágenes y el etiquetado de componentes conexas.
+* **NumPy:** Para operaciones numéricas, especialmente para trabajar con arrays de imágenes.
+* **Matplotlib:** Para mostrar las imágenes y los resultados.
+
+Puedes instalar estas librerías utilizando `pip` en iOS:
+pip install opencv-python numpy matplotlib
