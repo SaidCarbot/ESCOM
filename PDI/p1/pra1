@@ -1,0 +1,67 @@
+# De la práctica uno de PDI, 
+# Importar librerías
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+# ----- 1. Cargar y binarizar la imagen -----
+# Cargar imagen en escala de grises
+image = cv2.imread('imagen_prueba.png', cv2.IMREAD_GRAYSCALE)
+# Verificar si la imagen fue cargada correctamente
+if image is None:
+    print("Error al cargar la imagen.")
+    exit()
+# Umbralización para binarizar la imagen
+_, binary_image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
+# Mostrar imagen binarizada
+plt.figure(figsize=(6, 6))
+plt.imshow(binary_image, cmap='gray')
+plt.title('Imagen Binarizada')
+plt.axis('off')
+plt.show()
+# ----- 2. Etiquetado de componentes conexas -----
+# Vecindad-4
+num_labels_4, labels_4 = cv2.connectedComponents(binary_image, connectivity=4)
+# Vecindad-8
+num_labels_8, labels_8 = cv2.connectedComponents(binary_image, connectivity=8)
+print(f"Número de objetos detectados con vecindad-4: {num_labels_4 - 1}")
+print(f"Número de objetos detectados con vecindad-8: {num_labels_8 - 1}")
+# Mostrar resultados de vecindad-4
+plt.figure(figsize=(6, 6))
+plt.imshow(labels_4, cmap='jet')
+plt.title('Etiquetado con Vecindad-4')
+plt.colorbar()
+plt.axis('off')
+plt.show()
+
+# Mostrar resultados de vecindad-8
+plt.figure(figsize=(6, 6))
+plt.imshow(labels_8, cmap='jet')
+plt.title('Etiquetado con Vecindad-8')
+plt.colorbar()
+plt.axis('off')
+plt.show()
+# ----- 3. Dibujar contornos y numerar los objetos -----
+# Convertir imagen binaria a imagen en color para dibujar contornos
+image_color = cv2.cvtColor(binary_image, cv2.COLOR_GRAY2BGR)
+# Encontrar contornos en la imagen
+contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+# Dibujar los contornos y numerar los objetos
+for i, contour in enumerate(contours):
+# Dibujar contorno (color verde)
+    cv2.drawContours(image_color, [contour], -1, (0, 255, 0), 2)
+# Encontrar el centro del objeto y colocar el número
+    x, y, w, h = cv2.boundingRect(contour)
+    cv2.putText(image_color, f'{i + 1}', (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255, 0), 2)
+
+# Mostrar la imagen con los contornos y etiquetas
+plt.figure(figsize=(6, 6))
+plt.imshow(cv2.cvtColor(image_color, cv2.COLOR_BGR2RGB))
+plt.title('Objetos Detectados y Numerados')
+plt.axis('off')
+plt.show()
+# ----- 4. Comparación entre vecindad-4 y vecindad-8 -----
+diferencia = abs(num_labels_4 - num_labels_8)
+print(f"Diferencia entre vecindad-4 y vecindad-8: {diferencia}")
+
+# By Maria E. C. Meza  y Said C. Cruz Trejo.
+# ESCOM-IPN-MEX 
