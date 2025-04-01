@@ -1,0 +1,46 @@
+# Conecta 4 con IA
+
+## Descripción
+Este proyecto implementa el juego de Conecta 4 con una inteligencia artificial que elige el mejor movimiento posible. La lógica del juego está dividida en dos partes:
+
+1. **Python**: Se encarga de la interfaz gráfica (GUI) y la interacción con el usuario.
+2. **C**: Implementa la lógica de la IA para tomar decisiones óptimas.
+
+## Archivos del Proyecto
+- `mainp4.c`: Ejecuta la IA del juego.
+- `functionsp4.c`: Contiene la implementación de las funciones de la IA.
+- `functionsp4.h`: Contiene los prototipos de las funciones en C.
+- `p4.py`: Implementa la interfaz gráfica y la comunicación con el código en C.
+- `conecta4` (ejecutable): Se genera al compilar el código en C.
+
+## Instrucciones de Uso
+### 1. Compilación
+Para compilar el código en C, ejecutar el siguiente comando:
+```sh
+gcc mainp4.c functionsp4.c -o conecta4 -lm
+```
+
+### 2. Ejecución
+1. Ejecutar el archivo de Python para abrir la interfaz gráfica:
+   ```sh
+   python p4.py
+   ```
+2. Se abrirá una ventana con el juego de Conecta 4.
+3. El primer movimiento es del **jugador humano**.
+4. Después del turno humano, la IA calculará su mejor movimiento ejecutando `mainp4.c`.
+   - La IA devolverá la columna donde debe jugar a través de un archivo `tablero.txt`.
+   - `p4.py` leerá `tablero.txt` y actualizará la GUI.
+5. Se repetirá el proceso hasta que haya un ganador o el tablero se llene.
+
+## Funcionamiento Interno de la IA
+1. La IA lee el estado actual del tablero desde `tablero.txt`.
+2. Convierte el tablero en un array plano para procesarlo más fácilmente.
+3. Ejecuta un algoritmo de búsqueda para encontrar la mejor jugada posible.
+4. Escribe el nuevo estado del tablero en `tablero.txt`.
+5. Python actualiza la interfaz gráfica en función del movimiento de la IA.
+
+## Autores
+- **Said C. Cruz Trejo**
+- **Aaron U. Téllez**
+- **MEX-IPN-ESCOM-IA 2025/2 Spring 2025**
+
