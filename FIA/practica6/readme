@@ -1,0 +1,61 @@
+# Sistema Experto en Tipos de Neuronas
+
+Este proyecto implementa un sistema experto basado en reglas para la identificación de tipos de neuronas mediante preguntas interactivas.
+
+---
+
+## Descripción
+
+El sistema utiliza una base de conocimientos con reglas para deducir el tipo de neurona (sensorial, interneurona, motora, inhibidora o excitadora) a partir de atributos consultados al usuario. Se basa en la lógica de predicados en Prolog y una interacción sencilla para responder con "sí" o "no".
+
+---
+
+## Estructura del Sistema
+
+1. **Menú Principal**  
+   Permite al usuario consultar el tipo de neurona o salir del programa.
+
+2. **Motor Lógico**  
+   Realiza la inferencia basada en las respuestas almacenadas y muestra el resultado.
+
+3. **Lógica de Inferencia**  
+   Verifica si un atributo es verdadero, falso o debe preguntarse al usuario.
+
+4. **Interacción con el Usuario**  
+   Formula preguntas para obtener información sobre los atributos de la neurona.
+
+5. **Base de Conocimientos**  
+   Contiene las reglas que definen los diferentes tipos de neuronas y sus características.
+
+---
+
+## Uso
+
+Para ejecutar el sistema, carga el archivo Prolog y ejecuta el predicado `main.` en la consola de Prolog. Sigue las indicaciones para responder las preguntas y obtener la deducción del tipo de neurona.
+
+---
+
+## Ejemplo
+
+```prolog
+?- main.
+Sistema experto en tipos de neuronas
+
+Menú
+
+1 Consultar el tipo de neurona
+
+2 Salir
+
+Teclea tu opción:
+|: 1.
+
+¿Tu neurona detecta_estimulos? (s/si para sí, cualquier otra para no) s.
+
+¿Tu neurona es_unipolar_o_bipolar? (s/si para sí, cualquier otra para no) si.
+
+...
+
+Deduzco que el tipo de neurona es: sensorial
+
+Tal que: [detecta_estimulos, es_unipolar_o_bipolar, envia_a_interneuronas_o_medula, responde_a_luz]
