@@ -1,17 +1,17 @@
-# 🧠 Sistema Experto en Tipos de Neuronas
+# Sistema Experto en Tipos de Neuronas
 
 > Sistema experto basado en reglas para la identificación interactiva de tipos de neuronas.
 
 ---
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto implementa un **sistema experto basado en reglas** que permite deducir el tipo de neurona (sensorial, interneurona, motora, inhibidora o excitadora) a partir de respuestas del usuario.  
 Está desarrollado en **Prolog**, utilizando lógica de predicados y un motor lógico que interactúa con el usuario mediante preguntas simples de sí/no.
 
 ---
 
-## ⚙️ Estructura del Sistema
+## Estructura del Sistema
 
 - **Menú Principal:**  
   Permite consultar el tipo de neurona o salir del programa.
@@ -30,7 +30,7 @@ Está desarrollado en **Prolog**, utilizando lógica de predicados y un motor l�
 
 ---
 
-## 🚀 Uso
+## Uso
 
 1. Cargar el archivo Prolog en tu intérprete (ej. SWI-Prolog):
 
@@ -51,7 +51,7 @@ Está desarrollado en **Prolog**, utilizando lógica de predicados y un motor l�
 
 ---
 
-## 💡 Ejemplo de interacción
+## Ejemplo de interacción
 
 ```prolog
 ?- main.
