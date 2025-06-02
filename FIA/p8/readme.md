@@ -76,7 +76,7 @@ Ejecuta el script principal:
 python cansancio.py
 ```
 
-## Autor
+## Autores
 
 Desarrollado por Said Carbot & Aáron Ugalde
 MEX-IPN-ESCOM-IIA-2025/2
