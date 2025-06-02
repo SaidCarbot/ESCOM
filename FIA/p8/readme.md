@@ -73,17 +73,12 @@ ctrl.Rule(screenHours['A lot'] & halts['A lot'] & noise['High'], fatigue['Zombie
 Ejecuta el script principal:
 
 ```bash
-python nombre_del_script.py
+python cansancio.py
 ```
-
-## Captura de pantalla (opcional)
-
-Puedes incluir una imagen mostrando la interfaz y las gráficas de funciones de membresía.
 
 ## Autor
 
-Desarrollado por [Tu Nombre Aquí].
+Desarrollado por Said Carbot & Aáron Ugalde
+MEX-IPN-ESCOM-IIA-2025/2
 
 ---
-
-Este proyecto es un ejemplo práctico de cómo integrar lógica difusa en aplicaciones interactivas para la toma de decisiones basadas en incertidumbre.
