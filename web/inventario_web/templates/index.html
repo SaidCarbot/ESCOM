@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Menú Principal</h1>
+    <div class="menu-options">
+        <a href="{{ url_for('login') }}" class="btn">Iniciar Sesión</a>
+        <a href="{{ url_for('register') }}" class="btn">Registrarse</a>
+    </div>
+{% endblock %}

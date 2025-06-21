@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="admin-form-container">
+    <h1>Agregar Nuevo Producto</h1>
+    
+    <form method="POST" class="admin-form">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" min="0" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" min="0" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="categoria_id">Categoría:</label>
+            <select id="categoria_id" name="categoria_id" required>
+                {% for id, nombre in categorias %}
+                <option value="{{ id }}">{{ nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="fecha_caducidad">Fecha de Caducidad (opcional):</label>
+            <input type="date" id="fecha_caducidad" name="fecha_caducidad">
+        </div>
+        
+        <div class="form-group">
+            <label for="codigo_barras">Código de Barras (opcional):</label>
+            <input type="text" id="codigo_barras" name="codigo_barras">
+        </div>
+        
+        <div class="form-group">
+            <label for="costo_compra">Costo de Compra (opcional):</label>
+            <input type="number" id="costo_compra" name="costo_compra" step="0.01" min="0">
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Guardar Producto</button>
+            <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

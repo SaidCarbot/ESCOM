@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="admin-dashboard">
+    <h1>Panel de Vendedor</h1>
+    <p>Bienvenido, {{ user.nombre }} ({{ user.rol }})</p>
+    
+    <div class="dashboard-grid">
+        <a href="{{ url_for('agregar_producto') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Agregar_Producto.png') }}" alt="Agregar Producto">
+            <span>Agregar Producto</span>
+        </a>
+        
+        <a href="{{ url_for('actualizar_producto') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Actualizar_Producto.png') }}" alt="Actualizar Producto">
+            <span>Actualizar Producto</span>
+        </a>
+        
+        <a href="{{ url_for('ver_productos') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Ver_Mis_Productos.png') }}" alt="Ver Productos">
+            <span>Ver Mis Productos</span>
+        </a>
+        
+        <a href="{{ url_for('eliminar_producto') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Eliminar_Producto.png') }}" alt="Eliminar Producto">
+            <span>Eliminar Producto</span>
+        </a>
+        
+        <a href="{{ url_for('registrar_venta') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Registrar_Venta_Directa.png') }}" alt="Registrar Venta">
+            <span>Registrar Venta</span>
+        </a>
+        
+        <a href="{{ url_for('generar_reporte_productos') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Generar_Reporte_de_Productos.png') }}" alt="Reporte Productos">
+            <span>Reporte de Productos</span>
+        </a>
+        
+        <a href="{{ url_for('generar_reporte_ventas') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Generar_Reporte_de_Ventas.png') }}" alt="Reporte Ventas">
+            <span>Reporte de Ventas</span>
+        </a>
+        
+        <a href="{{ url_for('prediccion_demanda') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Predicción_de_Demanda.png') }}" alt="Predicción Demanda">
+            <span>Predicción de Demanda</span>
+        </a>
+        
+        <a href="{{ url_for('logout') }}" class="dashboard-card">
+            <img src="{{ url_for('static', filename='images/Salir.png') }}" alt="Salir">
+            <span>Salir</span>
+        </a>
+    </div>
+</div>
+{% endblock %}
