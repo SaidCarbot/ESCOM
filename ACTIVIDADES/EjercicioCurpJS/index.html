@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de CURP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 9px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    input:focus, select:focus, button:focus {
+      border-color: #3498db;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .resultado {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 1.2em;
+      background: #e0ffe0;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #b2ffb2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Generador de CURP</h1>
+
+  <form id="curpForm">
+    <label>Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label>Apellido Paterno:</label>
+    <input type="text" id="paterno" required>
+
+    <label>Apellido Materno:</label>
+    <input type="text" id="materno" required>
+
+    <label>Fecha de nacimiento (AAAA-MM-DD):</label>
+    <input type="date" id="fecha" pattern="\d{4}-\d{2}-\d{2}" required>
+
+    <label>Sexo:</label>
+    <select id="sexo" required>
+      <option value="">-- Selecciona --</option>
+      <option value="H">Hombre</option>
+      <option value="M">Mujer</option>
+    </select>
+
+    <label>Estado (clave oficial):</label>
+    <select id="estado" required>
+      <option value="">-- Selecciona --</option>
+      <option value="AS">Aguascalientes</option>
+      <option value="BC">Baja California</option>
+      <option value="BS">Baja California Sur</option>
+      <option value="CC">Campeche</option>
+      <option value="CL">Coahuila</option>
+      <option value="CM">Colima</option>
+      <option value="CS">Chiapas</option>
+      <option value="CH">Chihuahua</option>
+      <option value="DF">Ciudad de México</option>
+      <option value="DG">Durango</option>
+      <option value="GT">Guanajuato</option>
+      <option value="GR">Guerrero</option>
+      <option value="HG">Hidalgo</option>
+      <option value="JC">Jalisco</option>
+      <option value="MC">Estado de México</option>
+      <option value="MN">Michoacán</option>
+      <option value="MS">Morelos</option>
+      <option value="NT">Nayarit</option>
+      <option value="NL">Nuevo León</option>
+      <option value="OC">Oaxaca</option>
+      <option value="PL">Puebla</option>
+      <option value="QT">Querétaro</option>
+      <option value="QR">Quintana Roo</option>
+      <option value="SP">San Luis Potosí</option>
+      <option value="SL">Sinaloa</option>
+      <option value="SR">Sonora</option>
+      <option value="TC">Tabasco</option>
+      <option value="TS">Tamaulipas</option>
+      <option value="TL">Tlaxcala</option>
+      <option value="VZ">Veracruz</option>
+      <option value="YN">Yucatán</option>
+      <option value="ZS">Zacatecas</option>
+    </select>
+
+    <button type="submit">Generar CURP</button>
+  </form>
+
+  <div class="resultado" id="resultado" style="display:none;"></div>
+
+  <script src = "curp.js"></script>
+
+</body>
+</html>

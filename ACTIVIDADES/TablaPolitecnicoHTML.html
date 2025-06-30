@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de HTML - Jornada de Inducción ESCOM 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000;
+        }
+
+        .gris {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        .negrita {
+            font-weight: bold;
+            color: #000;
+            font-size: 17px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #eee;
+            text-align: center;
+        }
+
+        td.letras, td.horario {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .dia {
+            font-weight: bold;
+        }
+
+        .horario {
+            white-space: nowrap;
+        }
+        .encabezado-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .encabezado-flex .logo img {
+            height: 160px;
+        }
+
+        .titulo-central {
+            text-align: center;
+            flex: 1;
+        }
+
+        .titulo-central h1 {
+            font-size: 28px;
+            font-weight: 900;
+            color: #000000;
+            margin: 0;
+        }
+
+        .titulo-central h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #444444;
+            text-transform: uppercase;
+            margin: 4px 0;
+        }
+
+        .titulo-central p {
+            margin: 2px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+</div><div class="encabezado-flex">
+    <div class="logo">
+        <img src="logo_ipn.png" alt="Logo IPN">
+    </div>
+    <div class="titulo-central">
+        <h1>INSTITUTO POLITÉCNICO NACIONAL</h1>
+        <h2>ESCUELA SUPERIOR DE CÓMPUTO</h2>
+        <p class="gris">SUBDIRECCIÓN DE SERVICIOS EDUCATIVOS E INTEGRACIÓN SOCIAL</p>
+        <p class="gris">DEPARTAMENTO DE EXTENSIÓN Y APOYOS EDUCATIVOS</p>
+        <p class="negrita">Jornada de Inducción para los estudiantes de nuevo ingreso, agosto 2024</p>
+        <p class="negrita">Sede: Auditorio de la ESCOM</p>
+    </div>
+    <div class="logo">
+        <img src="logo_escom.png" alt="Logo ESCOM">
+    </div>
+</div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Día/Actividades</th>
+            <th>Por primera letra de primer apellido</th>
+            <th>Horario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">
+                <span class="dia">Martes 20 de agosto de 2024</span><br>
+                1. Bienvenida por parte de las autoridades<br>
+                2. Identidad Politécnica<br>
+                3. Normatividad IPN
+            </td>
+            <td class="letras">A a L</td>
+            <td class="horario">10:00 a 11:30 horas</td>
+        </tr>
+        <tr>
+            <td class="letras">M a Z</td>
+            <td class="horario">12:00 a 13:30 horas</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">
+                <span class="dia">Miércoles 21 de agosto de 2024</span><br>
+                1. Presentación de la Red de Género de la ESCOM<br>
+                2. Presentación del Departamento de Servicios Estudiantiles
+            </td>
+            <td class="letras">A a L</td>
+            <td class="horario">10:00 a 11:30 horas</td>
+        </tr>
+        <tr>
+            <td class="letras">M a Z</td>
+            <td class="horario">12:00 a 13:30 horas</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">
+                <span class="dia">Jueves 22 de agosto de 2024</span><br>
+                1. Perfil de ingreso y egreso de los programas académicos<br>
+                2. Presentación de jefes de la Subdirección Académica
+            </td>
+            <td class="letras">A a L</td>
+            <td class="horario">10:00 a 11:30 horas</td>
+        </tr>
+        <tr>
+            <td class="letras">M a Z</td>
+            <td class="horario">12:00 a 13:30 horas</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">
+                <span class="dia">Viernes 23 de agosto de 2024</span><br>
+                1. Presentación de la Subdirección de Servicios Educativos e Integración Social<br>
+                2. Gestión Escolar, movilidad, becas, servicio social y bolsa de trabajo<br>
+                3. Plática de la Comisión de Operación y Fomento de Actividades Académicas (COFAA)
+            </td>
+            <td class="letras">A a L</td>
+            <td class="horario">10:00 a 11:30 horas</td>
+        </tr>
+        <tr>
+            <td class="letras">M a Z</td>
+            <td class="horario">12:00 a 13:30 horas</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">
+                <span class="dia">Sábado 24 de agosto de 2024</span><br>
+                1. Plática con padres y madres de estudiantes de nuevo ingreso<br>
+                2. Donativos
+            </td>
+            <td class="letras">A a L</td>
+            <td class="horario">9:00 a 10:30 horas</td>
+        </tr>
+        <tr>
+            <td class="letras">M a Z</td>
+            <td class="horario">11:30 a 13:00 horas</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
