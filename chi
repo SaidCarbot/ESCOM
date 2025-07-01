@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Distribuciones Chi-cuadrado</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <h2>Distribuciones Chi-cuadrado (grados de libertad 1 a 10)</h2>
+  <div id="chart" style="width: 100%; height: 600px;"></div>
+
+  <script>
+    function chiSquaredPDF(x, k) {
+      if (x < 0) return 0;
+      const gamma = (n) => {
+        // Aprox. función gamma para enteros positivos
+        if (n === 1) return 1;
+        if (n === 0.5) return Math.sqrt(Math.PI);
+        return (n - 1) * gamma(n - 1);
+      };
+      return (1 / (Math.pow(2, k / 2) * gamma(k / 2))) *
+             Math.pow(x, k / 2 - 1) * Math.exp(-x / 2);
+    }
+
+    const xValues = [];
+    for (let x = 0; x <= 30; x += 0.1) {
+      xValues.push(x);
+    }
+
+    const data = [];
+
+    for (let k = 1; k <= 10; k++) {
+      const yValues = xValues.map(x => chiSquaredPDF(x, k));
+      data.push({
+        x: xValues,
+        y: yValues,
+        mode: 'lines',
+        name: `k = ${k}`
+      });
+    }
+
+    Plotly.newPlot('chart', data, {
+      title: 'Distribución Chi-cuadrado para distintos grados de libertad',
+      xaxis: { title: 'Valor de chi²' },
+      yaxis: { title: 'Densidad de probabilidad' }
+    });
+  </script>
+</body>
+</html>
