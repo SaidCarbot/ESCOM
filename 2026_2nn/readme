@@ -1,0 +1,23 @@
+# Clasificación de CIFAR-100: CNN desde cero 🚀
+
+Este repositorio contiene el desarrollo y entrenamiento de tres arquitecturas de Redes Neuronales Convolucionales (CNN) diseñadas desde cero para resolver el problema de clasificación de imágenes del dataset **CIFAR-100** (etiquetas finas de 100 clases). 
+
+Este proyecto fue desarrollado como parte de las actividades de la asignatura de Redes Neuronales y Aprendizaje Profundo en la Escuela Superior de Cómputo (ESCOM). El objetivo principal es demostrar un proceso experimental controlado: diseño de arquitecturas, prevención del sobreajuste (overfitting) y selección argumentada del mejor modelo.
+
+---
+
+## Entorno y Requisitos
+
+El código está optimizado para ejecutarse en **Google Colab** utilizando aceleración por hardware. 
+
+### Ejecución en Google Colab
+Todas las bibliotecas utilizadas están preinstaladas de forma nativa en el entorno de Colab. 
+**Importante:** Para que el entrenamiento se realice en un tiempo óptimo (aprox. 20 segundos por época), es obligatorio activar el uso de GPU.
+1. Ve al menú `Entorno de ejecución` > `Cambiar tipo de entorno de ejecución`.
+2. En `Acelerador de hardware`, selecciona **T4 GPU** (o superior).
+
+### Ejecución Local
+Si deseas correr este cuaderno (`.ipynb`) en tu máquina local, necesitarás tener Python instalado y ejecutar el siguiente comando para instalar las dependencias necesarias:
+
+```bash
+pip install tensorflow matplotlib numpy pandas seaborn scikit-learn
