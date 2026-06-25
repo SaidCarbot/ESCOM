@@ -1,4 +1,4 @@
-# Clasificación de CIFAR-100: CNN desde cero, Transfer Learning y Fine-Tuning 🚀
+# Clasificación de CIFAR-100: CNN desde cero, Transfer Learning y Fine-Tuning
 
 Este repositorio contiene el desarrollo, entrenamiento y evaluación de múltiples arquitecturas de Redes Neuronales Convolucionales (CNN) para resolver el problema de clasificación de imágenes del dataset **CIFAR-100** (etiquetas finas de 100 clases). 
 
