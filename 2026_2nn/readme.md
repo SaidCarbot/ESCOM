@@ -4,8 +4,8 @@ Este repositorio contiene el desarrollo, entrenamiento y evaluación de múltipl
 
 Contiene: 
 - **Reporte en PDF**
-- **Archivo ipyn con la primera tarea**
-- **Archivo ipyn con la segunda tarea**
+- **Archivo ipynb con la primera tarea**
+- **Archivo ipynb con la segunda tarea**
 
 Este proyecto fue desarrollado como parte de las actividades de la asignatura de Redes Neuronales y Aprendizaje Profundo en la Escuela Superior de Cómputo (ESCOM). El objetivo principal es demostrar un proceso experimental controlado dividido en dos grandes fases:
 1. Diseño de arquitecturas desde cero y prevención del sobreajuste.
