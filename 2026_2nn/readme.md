@@ -2,7 +2,7 @@
 
 Este repositorio contiene el desarrollo, entrenamiento y evaluación de múltiples arquitecturas de Redes Neuronales Convolucionales (CNN) para resolver el problema de clasificación de imágenes del dataset **CIFAR-100** (etiquetas finas de 100 clases). 
 
-Contiene:
+Contiene: 
 - **Reporte en PDF**
 - **Archivo ipyn con la primera tarea**
 - **Archivo ipyn con la segunda tarea**
