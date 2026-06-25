@@ -1,6 +1,6 @@
-# Clasificación de CIFAR-100: CNN desde cero, Transfer Learning y Fine-Tuning
+# Clasificación de CIFAR-100: CNN desde cero, Transfer Learning y Fine-Tuning 🚀
 
-Este repositorio contiene el desarrollo y entrenamiento de múltiples arquitecturas de Redes Neuronales Convolucionales (CNN) para resolver el problema de clasificación de imágenes del dataset **CIFAR-100** (etiquetas finas de 100 clases). 
+Este repositorio contiene el desarrollo, entrenamiento y evaluación de múltiples arquitecturas de Redes Neuronales Convolucionales (CNN) para resolver el problema de clasificación de imágenes del dataset **CIFAR-100** (etiquetas finas de 100 clases). 
 
 Este proyecto fue desarrollado como parte de las actividades de la asignatura de Redes Neuronales y Aprendizaje Profundo en la Escuela Superior de Cómputo (ESCOM). El objetivo principal es demostrar un proceso experimental controlado dividido en dos grandes fases:
 1. Diseño de arquitecturas desde cero y prevención del sobreajuste.
@@ -8,9 +8,9 @@ Este proyecto fue desarrollado como parte de las actividades de la asignatura de
 
 ---
 
-## Entorno y Requisitos
+## 🛠️ Entorno y Requisitos
 
-El código está optimizado para ejecutarse en **Google Colab** utilizando aceleración por hardware. Consta de dos cuadernos independientes para evitar la saturación de la memoria.
+El código está optimizado para ejecutarse en **Google Colab** utilizando aceleración por hardware. Consta de dos cuadernos independientes (`.ipynb`) para evitar la saturación de la memoria.
 
 ### Ejecución en Google Colab
 Todas las bibliotecas utilizadas están preinstaladas de forma nativa en el entorno de Colab. 
@@ -19,7 +19,7 @@ Todas las bibliotecas utilizadas están preinstaladas de forma nativa en el ento
 2. En `Acelerador de hardware`, selecciona **T4 GPU** (o superior).
 
 ### Ejecución Local
-Si deseas correr estos cuadernos (`.ipynb`) en tu máquina local, necesitarás tener Python instalado y ejecutar el siguiente comando para instalar las dependencias necesarias:
+Si deseas correr estos cuadernos en tu máquina local, necesitarás tener Python instalado y ejecutar el siguiente comando para instalar las dependencias necesarias:
 
 ```bash
 pip install tensorflow matplotlib numpy pandas seaborn scikit-learn
