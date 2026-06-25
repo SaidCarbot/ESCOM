@@ -8,7 +8,7 @@ Este proyecto fue desarrollado como parte de las actividades de la asignatura de
 
 ---
 
-## 🛠️ Entorno y Requisitos
+## Entorno y Requisitos
 
 El código está optimizado para ejecutarse en **Google Colab** utilizando aceleración por hardware. Consta de dos cuadernos independientes (`.ipynb`) para evitar la saturación de la memoria.
 
